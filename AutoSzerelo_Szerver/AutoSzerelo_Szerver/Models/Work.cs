@@ -12,7 +12,7 @@ namespace AutoSzerelo_Szerver.Models
         public string CarType { get; set; }
         public string LicensePlate { get; set; }
         public string Problem { get; set; }
-        public DateTime Date { get; set; }
+        public string Date { get; set; }
 
     }
 }
