@@ -1,0 +1,32 @@
+﻿<Window x:Class="AutoSzerelo_Munka_Felvevo_Kliens.DeleteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoSzerelo_Munka_Felvevo_Kliens"
+        mc:Ignorable="d"
+        Title="DeleteWindow" Height="160" Width="280" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="Írd be a törlendő munka id-ját!" HorizontalContentAlignment="Center" FontWeight="Bold" Margin="5"></Label>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Column="0" Grid.Row="0" Content="ID:" FontWeight="Bold" Margin="5"></Label>
+            <TextBox Grid.Column="1" Grid.Row="0" x:Name="TorlendoId" Margin="8" PreviewTextInput="NumberValidation"></TextBox>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Button Content="Munka Törlése" Width="120" HorizontalAlignment="Right" Margin="5 5 5 5" Padding="5" Click="DeleteWork"></Button>
+        </Grid>
+    </Grid>
+</Window>

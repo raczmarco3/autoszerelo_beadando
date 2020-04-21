@@ -58,5 +58,16 @@ namespace AutoSzerelo_Munka_Felvevo_Kliens
 
             return sortedList;
         }
+
+        private void RemoveWork(object sender, RoutedEventArgs e)
+        {
+            var window = new DeleteWindow();
+            
+            if(window.ShowDialog() ?? false)
+            {
+                UpdateWork();
+            }
+
+        }
     }
 }
