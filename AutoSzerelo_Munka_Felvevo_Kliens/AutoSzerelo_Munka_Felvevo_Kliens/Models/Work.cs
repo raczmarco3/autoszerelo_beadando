@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace AutoSzerelo_Szerver.Models
+namespace AutoSzerelo_Munka_Felvevo_Kliens.Models
 {
     public class Work
     {

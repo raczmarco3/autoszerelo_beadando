@@ -41,7 +41,8 @@ namespace AutoSzerelo_Szerver.Controllers
         {
             var works = WorkRepository.GetWork();
             var newId = GetNewId(works);
-            string Date = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
+            //string Date = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
+            DateTime Date = DateTime.Now;
 
             work.WorkId = newId;
             work.Date = Date;
