@@ -33,11 +33,6 @@ namespace AutoSzerelo_Munka_Felvevo_Kliens
             this.Close();
         }
 
-        private void AddNew_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void WorksListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -68,6 +63,16 @@ namespace AutoSzerelo_Munka_Felvevo_Kliens
                 UpdateWork();
             }
 
+        }
+
+        private void AddNewButton_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new AddNewWindow();
+
+            if (window.ShowDialog() ?? false)
+            {
+                UpdateWork();
+            }
         }
     }
 }
