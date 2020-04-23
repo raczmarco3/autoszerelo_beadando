@@ -46,6 +46,7 @@ namespace AutoSzerelo_Szerver.Controllers
 
             work.WorkId = newId;
             work.Date = Date;
+            work.State = "felvett";
             works.Add(work);
             WorkRepository.StoreWork(works);
 

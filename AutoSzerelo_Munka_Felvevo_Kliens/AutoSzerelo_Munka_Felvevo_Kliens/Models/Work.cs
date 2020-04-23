@@ -14,6 +14,7 @@ namespace AutoSzerelo_Munka_Felvevo_Kliens.Models
         public string LicensePlate { get; set; }
         public string Problem { get; set; }
         public DateTime Date { get; set; }
+        public string State { get; set; }
 
     }
 }

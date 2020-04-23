@@ -27,25 +27,26 @@
             <Label Content="Autó Típusa" Width="80"></Label>
             <Label Content="Rendszám" Width="60"></Label>
             <Label Content="Hozzáadva" Width="160"></Label>
-            <Label Content="Probléma"></Label>
+            <Label Content="Státusz" Width="60"></Label>
+            <Label Content="Probléma" MinWidth="220"></Label>
         </StackPanel>
         <ListBox Grid.Row="3" Margin="15 0 15 15" x:Name="WorksListBox" SelectionMode="Single" SelectionChanged="WorksListBox_SelectionChanged">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>                    
-                   <Grid>
+                    <Grid>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding WorkId}" Width="60" Margin="0 5 0 5"/>
                             <TextBlock Text="{Binding ClientName}" Width="170" Margin="0 5 0 5"/>
                             <TextBlock Text="{Binding CarType}" Width="80" Margin="0 5 0 5"/>
                             <TextBlock Text="{Binding LicensePlate}" Width="60" Margin="0 5 0 5"/>
-                            <TextBlock Text="{Binding Date}" Width="160" Margin="0 5 0 5"/>                       
-                            <TextBlock Text="{Binding Problem}" Margin="0 5 0 5"/>                            
+                            <TextBlock Text="{Binding Date}" Width="160" Margin="0 5 0 5"/>
+                            <TextBlock Text="{Binding State}" Width="60" Margin="0 5 0 5"/>
+                            <TextBlock Text="{Binding Problem}" MinWidth="220" Margin="0 5 0 5"/>
                         </StackPanel>
-                    </Grid>                    
+                    </Grid>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ListBox>
-
         <Button Grid.Row="4" x:Name="AddNewButton" Content="Munka Hozzáadása" Width="120" HorizontalAlignment="Right" Margin="15 0 25 15" Padding="5" Click="AddNewButton_Click"/>
     </Grid>
 </Window>
