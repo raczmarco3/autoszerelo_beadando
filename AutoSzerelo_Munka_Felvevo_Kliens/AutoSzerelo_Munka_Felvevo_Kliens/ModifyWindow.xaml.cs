@@ -1,19 +1,44 @@
 ﻿using AutoSzerelo_Munka_Felvevo_Kliens.DataProviders;
 using AutoSzerelo_Munka_Felvevo_Kliens.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 
 namespace AutoSzerelo_Munka_Felvevo_Kliens
 {
     /// <summary>
-    /// Interaction logic for AddNewWindow.xaml
+    /// Interaction logic for ModifyWindow.xaml
     /// </summary>
-    public partial class AddNewWindow : Window
+    public partial class ModifyWindow : Window
     {
-        public AddNewWindow()
+        private readonly Work _work;
+        public ModifyWindow(Work work)
         {
-            InitializeComponent();            
+            InitializeComponent();
+
+            if(work != null)
+            {
+                _work = work;
+                ClientName.Text = _work.ClientName;
+                CarType.Text = _work.CarType;
+                LicensePlate.Text = _work.LicensePlate;
+                Problem.Text = _work.Problem;
+            }
+            else
+            {
+                MessageBox.Show("A work üres!", "Hiba");
+            }
         }
 
         private bool ValidateTextBox()
@@ -50,22 +75,19 @@ namespace AutoSzerelo_Munka_Felvevo_Kliens
             return true;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
+        private void ModifyClick(object sender, RoutedEventArgs e)
+        {          
             if (ValidateTextBox())
-            {
-                var _work = new Work();
+            {                
                 _work.ClientName = ClientName.Text;
                 _work.CarType = CarType.Text;
                 _work.LicensePlate = LicensePlate.Text;
                 _work.Problem = Problem.Text;
 
-                WorkDataProvider.CreateWork(_work);
-
+                WorkDataProvider.UpdateWork(_work);
                 DialogResult = true;
                 Close();
-            }
+            }            
         }
-                
     }
 }

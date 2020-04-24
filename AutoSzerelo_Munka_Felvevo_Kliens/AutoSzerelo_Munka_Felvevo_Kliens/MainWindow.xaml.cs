@@ -35,9 +35,18 @@ namespace AutoSzerelo_Munka_Felvevo_Kliens
 
         private void WorksListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            var selectedWork = WorksListBox.SelectedItem as Work;
 
+            if (selectedWork != null)
+            {
+                var window = new ModifyWindow(selectedWork);
+                if (window.ShowDialog() ?? false)
+                {
+                    UpdateWork();
+                }
+            }
+            WorksListBox.UnselectAll();
         }
-
         private void UpdateWork()
         {
            var _works = DataSortedByDate();            

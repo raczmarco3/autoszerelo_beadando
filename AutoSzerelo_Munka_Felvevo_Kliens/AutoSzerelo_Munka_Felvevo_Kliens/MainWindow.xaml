@@ -28,7 +28,7 @@
             <Label Content="Rendszám" Width="60"></Label>
             <Label Content="Hozzáadva" Width="160"></Label>
             <Label Content="Státusz" Width="60"></Label>
-            <Label Content="Probléma" MinWidth="220"></Label>
+            <Label Content="Probléma" Width="200"></Label>
         </StackPanel>
         <ListBox Grid.Row="3" Margin="15 0 15 15" x:Name="WorksListBox" SelectionMode="Single" SelectionChanged="WorksListBox_SelectionChanged">
             <ItemsControl.ItemTemplate>
@@ -41,7 +41,7 @@
                             <TextBlock Text="{Binding LicensePlate}" Width="60" Margin="0 5 0 5"/>
                             <TextBlock Text="{Binding Date}" Width="160" Margin="0 5 0 5"/>
                             <TextBlock Text="{Binding State}" Width="60" Margin="0 5 0 5"/>
-                            <TextBlock Text="{Binding Problem}" MinWidth="220" Margin="0 5 0 5"/>
+                            <TextBlock Text="{Binding Problem}" Width="200" Margin="0 5 0 5"/>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>

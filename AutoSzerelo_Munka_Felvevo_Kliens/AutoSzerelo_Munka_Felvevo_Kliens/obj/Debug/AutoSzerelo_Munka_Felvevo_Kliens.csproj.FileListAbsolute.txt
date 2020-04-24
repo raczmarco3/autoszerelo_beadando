@@ -19,3 +19,5 @@ C:\Users\Marco\Documents\autoszerelo_beadando\AutoSzerelo_Munka_Felvevo_Kliens\A
 C:\Users\Marco\Documents\autoszerelo_beadando\AutoSzerelo_Munka_Felvevo_Kliens\AutoSzerelo_Munka_Felvevo_Kliens\obj\Debug\DeleteWindow.baml
 C:\Users\Marco\Documents\autoszerelo_beadando\AutoSzerelo_Munka_Felvevo_Kliens\AutoSzerelo_Munka_Felvevo_Kliens\obj\Debug\AddNewWindow.g.cs
 C:\Users\Marco\Documents\autoszerelo_beadando\AutoSzerelo_Munka_Felvevo_Kliens\AutoSzerelo_Munka_Felvevo_Kliens\obj\Debug\AddNewWindow.baml
+C:\Users\Marco\Documents\autoszerelo_beadando\AutoSzerelo_Munka_Felvevo_Kliens\AutoSzerelo_Munka_Felvevo_Kliens\obj\Debug\ModifyWindow.g.cs
+C:\Users\Marco\Documents\autoszerelo_beadando\AutoSzerelo_Munka_Felvevo_Kliens\AutoSzerelo_Munka_Felvevo_Kliens\obj\Debug\ModifyWindow.baml

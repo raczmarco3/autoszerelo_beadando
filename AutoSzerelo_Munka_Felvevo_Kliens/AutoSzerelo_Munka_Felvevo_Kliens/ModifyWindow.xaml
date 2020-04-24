@@ -1,11 +1,11 @@
-﻿<Window x:Class="AutoSzerelo_Munka_Felvevo_Kliens.AddNewWindow"
+﻿<Window x:Class="AutoSzerelo_Munka_Felvevo_Kliens.ModifyWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoSzerelo_Munka_Felvevo_Kliens"
         mc:Ignorable="d"
-        Title="AddNewWindow" Height="310" Width="400" WindowStartupLocation="CenterScreen">
+        Title="ModifyWindow" Height="310" Width="400" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
@@ -13,7 +13,7 @@
             <RowDefinition Height="auto"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Content="Új munka hozzáadása:" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="20" Margin="10"></Label>
+        <Label Grid.Row="0" Content="Munka módosítása:" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="20" Margin="10"></Label>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100"></ColumnDefinition>
@@ -37,6 +37,6 @@
             <Label Grid.Column="0" Grid.Row="3" Content="Probléma:" FontWeight="Bold" Margin="2 8 8 8"></Label>
             <TextBox Grid.Column="1" Grid.Row="3" Margin="10" x:Name="Problem"></TextBox>
         </Grid>
-        <Button Content="Hozzáadás" Grid.Row="2" Width="110" HorizontalAlignment="Right" Margin="10" Padding="5" Click="Button_Click"></Button>
+        <Button Content="Módosítás" Grid.Row="2" Width="110" HorizontalAlignment="Right" Margin="10" Padding="5" Click="ModifyClick"></Button>
     </Grid>
 </Window>
