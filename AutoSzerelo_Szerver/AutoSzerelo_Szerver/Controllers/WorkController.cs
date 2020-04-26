@@ -45,8 +45,7 @@ namespace AutoSzerelo_Szerver.Controllers
             DateTime Date = DateTime.Now;
 
             work.WorkId = newId;
-            work.Date = Date;
-            work.State = "felvett";
+            work.Date = Date;                  
             works.Add(work);
             WorkRepository.StoreWork(works);
 
@@ -65,6 +64,7 @@ namespace AutoSzerelo_Szerver.Controllers
                 oldWork.CarType = work.CarType;
                 oldWork.LicensePlate = work.LicensePlate;
                 oldWork.Problem = work.Problem;
+                oldWork.State = work.State;
             }
             else
             {

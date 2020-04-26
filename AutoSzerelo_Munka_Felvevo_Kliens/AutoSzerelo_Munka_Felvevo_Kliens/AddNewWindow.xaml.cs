@@ -59,6 +59,7 @@ namespace AutoSzerelo_Munka_Felvevo_Kliens
                 _work.CarType = CarType.Text;
                 _work.LicensePlate = LicensePlate.Text;
                 _work.Problem = Problem.Text;
+                _work.State = "Felvett";
 
                 WorkDataProvider.CreateWork(_work);
 
