@@ -16,34 +16,84 @@ namespace AutoSzerelo_Munka_Felvevo_Kliens
             InitializeComponent();            
         }
 
+        public bool ValidateLicensePlate(string licensePlate)
+        {
+            if (!string.IsNullOrEmpty(LicensePlate.Text))
+            {
+                licensePlate = LicensePlate.Text;
+            }
+
+            Regex regex = new Regex("[A-Z]{3}-{1}[0-9]{3}$");
+            if (!regex.IsMatch(licensePlate))
+            {
+                MessageBox.Show("Hibás rendszám formátum! Helyes formátum: ABC-123", "Figyelmeztetés");
+                return false;
+            }
+            return true;
+        }
+
+        public bool ValidateClientName(string clientName)
+        {
+            if (!string.IsNullOrEmpty(ClientName.Text))
+            {
+                clientName = ClientName.Text;
+            }
+
+            if (string.IsNullOrEmpty(clientName))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool ValidateCarType(string carType)
+        {
+            if (!string.IsNullOrEmpty(CarType.Text))
+            {
+                carType = CarType.Text;
+            }
+
+            if (string.IsNullOrEmpty(carType))
+            {
+                return false;
+            }
+            return true;
+        }
+
         private bool ValidateTextBox()
         {
-            if (string.IsNullOrEmpty(ClientName.Text))
+            if (ClientName.Text != null)
             {
-                MessageBox.Show("Az ügyfél neve nem lehet üres!", "Figyelmeztetés");
-                return false;
+                if (ValidateClientName(ClientName.Text) == false)
+                {
+                    MessageBox.Show("Az ügyfél neve nem lehet üres!", "Figyelmeztetés");
+                    return false;
+                }
             }
-            else if (string.IsNullOrEmpty(CarType.Text))
+            
+            if (CarType.Text != null)
             {
-                MessageBox.Show("Az autó típusa nem lehet üres!", "Figyelmeztetés");
-                return false;
+                if (ValidateCarType(CarType.Text) == false)
+                {
+                    MessageBox.Show("Az autó típusa nem lehet üres!", "Figyelmeztetés");
+                    return false;
+                }
             }
-            else if (string.IsNullOrEmpty(LicensePlate.Text))
+
+            if (string.IsNullOrEmpty(LicensePlate.Text))
             {
                 MessageBox.Show("A rendszám nem lehet üres!", "Figyelmeztetés");
                 return false;
             }
             else if (string.IsNullOrEmpty(Problem.Text))
             {
-                MessageBox.Show("Az autó baja nem lehet üres!", "Figyelmeztetés");
+                MessageBox.Show("Az autó probémája nem lehet üres!", "Figyelmeztetés");
                 return false;
             }
             else if (LicensePlate.Text != null)
             {
-                Regex regex = new Regex("[A-Z]{3}-{1}[0-9]{3}");
-                if (!regex.IsMatch(LicensePlate.Text))
+                if (ValidateLicensePlate(LicensePlate.Text) == false)
                 {
-                    MessageBox.Show("Hibás rendszám formátum! Helyes formátum: ABC-123", "Figyelmeztetés");
                     return false;
                 }
             }

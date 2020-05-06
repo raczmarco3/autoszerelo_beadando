@@ -60,12 +60,12 @@ namespace AutoSzerelo_Munka_Felvevo_Kliens
             }
             else if (string.IsNullOrEmpty(Problem.Text))
             {
-                MessageBox.Show("Az autó baja nem lehet üres!", "Figyelmeztetés");
+                MessageBox.Show("Az autó probémája nem lehet üres!", "Figyelmeztetés");
                 return false;
             }
             else if (LicensePlate.Text != null)
             {
-                Regex regex = new Regex("[A-Z]{3}-{1}[0-9]{3}");
+                Regex regex = new Regex("[A-Z]{3}-{1}[0-9]{3}$");
                 if (!regex.IsMatch(LicensePlate.Text))
                 {
                     MessageBox.Show("Hibás rendszám formátum! Helyes formátum: ABC-123", "Figyelmeztetés");
